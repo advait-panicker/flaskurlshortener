@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/style.css') }}">
+</head>
+<body>
+    <h1>URL Shortener</h1>
+    <form method="POST">
+        <input name="url" type="text">
+        <input type="submit" value="Shorten">
+    </form>
+    <a id="generated-url" class="{% if shown %}fade-in{% else %}hide{% endif %}" href="{{ new_link }}">{{ new_link }}</a>
+    <script>
+        // Get the current URL without the hash (if present)
+        const currentUrl = window.location.href.split('#')[0];
+
+        // Get the generated string from the template data
+        const generatedString = document.getElementById('generated-url').textContent.trim();
+
+        // Combine the URL and generated string for display
+        const combinedUrl = `${currentUrl}${generatedString}`;
+
+        // Update the displayed content (replace with your desired element)
+        document.getElementById('generated-url').href = combinedUrl;
+        document.getElementById('generated-url').textContent = combinedUrl;
+    </script>
+</body>
+</html>
