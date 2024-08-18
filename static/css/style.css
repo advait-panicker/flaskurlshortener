@@ -5,10 +5,66 @@
 .fade-in {
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards;
-    animation-delay: 0.5s; /* Optional delay to adjust timing */
+    animation-delay: 0.5s; 
 }
 
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+body {
+    background-color: #0a0f2c; 
+    color: #d0e6f6; 
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 10%;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #3ecf8e; 
+    margin-bottom: 20px;
+}
+
+form input[type="text"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid #3ecf8e; 
+    background-color: #12203d; 
+    color: #d0e6f6;
+    width: 300px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+form input[type="text"]:focus {
+    outline: none;
+    border-color: #57f9a0; 
+}
+
+form input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #3ecf8e; 
+    color: #0a0f2c; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #57f9a0; 
+}
+
+a#generated-url {
+    display: block;
+    margin-top: 20px;
+    color: #57f9a0;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+a#generated-url:hover {
+    color: #72ffc4; 
 }
